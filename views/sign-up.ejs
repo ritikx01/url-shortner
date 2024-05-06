@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <form action="/user/sign-up" method="post">
+        <label for="email">Email </label>
+        <input type="text" name="email" id="email">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <br>
+        <button type="submit">Sign Up</button>
+    </form>
+    <% if (msg || msg=== '') { %>
+        <p style="color:red"><%= msg %></p>
+    <% } %>
+    <br>
+    <a href="/">
+        <button>Home</button>
+    </a>
+</body>
+</html>

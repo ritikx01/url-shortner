@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create short links</title>
+</head>
+<body>
+    <form action="/url" method="post">
+        <label for="url-input">Enter URL</label>
+        <input type="text" id="url-input" name="url" required>
+        <button type="submit">Create</button>
+    </form>
+    <% if (msg !== "") { %>
+        <p>Your short ID is: <%= msg %></p>
+    <% } %>
+    <br>
+    <a href="/">
+        <button>Home</button>
+    </a>
+</body>
+</html>

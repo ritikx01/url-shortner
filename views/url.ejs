@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Analytics</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>All analytics</h1>
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>ShortID</th>
+            <th>Redirect URL</th>
+            <th>Visit count</th>
+        </tr>
+        <% urls.forEach((url, index) => { %>
+         <tr>
+            <td><%= index+1 %></td>
+            <td><a href=<%= url.shortID %>>
+                <%= url.shortID %>
+            </a></td>
+            <td><%= url.redirectURL %></td>
+            <td><%= url.visitHistory.length %></td>
+         </tr>
+        <% }) %>
+    </table>
+    <br>
+    <a href="/">
+        <button>Home</button>
+    </a>
+</body>
+</html>
